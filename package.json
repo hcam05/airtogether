@@ -1,10 +1,10 @@
 {
-  "name": "react-redux-server-boilerplate",
+  "name": "airtogether",
   "version": "1.0.0",
   "description": "React / Redux server side rendering boilerplate",
   "main": "index.js",
   "scripts": {
-    "start": "cd dist && node server",
+    "start": "npm run build && cd dist && node server.js",
     "build": "webpack",
     "lint": "functionhappy | snazzy"
   },
@@ -44,6 +44,7 @@
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-redux": "^4.4.5",
+    "react-redux-server-boilerplate": "^1.0.0",
     "redux": "^3.6.0"
   }
 }

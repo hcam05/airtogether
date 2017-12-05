@@ -9,6 +9,13 @@ import { enableMobile } from './app/modules/device';
 import App from './app';
 import template from './template';
 
+import db from './db/dbConfig';
+
+//database connection
+db.connect()
+  .then(obj => db.any('SELECT * FROM users'))
+  .catch(error => console.log('error connecting'));
+
 const server = express();
 
 server.use('/assets', express.static('assets'));
@@ -32,5 +39,6 @@ server.get('/', (req, res) => {
   }));
 });
 
-server.listen(8080);
-console.log('listening');
+server.listen(8080, () => {
+  console.log('listening on port 8080');
+});

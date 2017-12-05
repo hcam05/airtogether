@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Roilan/react-redux-server-boilerplate"
+    "url": "https://github.com/airtogether/airtogether"
   },
   "keywords": [
     "react",
     "react server",
     "reactjs"
   ],
-  "author": "Roilan <roilan14@gmail.com>",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Roilan/react-redux-server-boilerplate/issues"
+    "url": "https://github.com/airtogether/airtogether"
   },
-  "homepage": "https://github.com/Roilan/react-redux-server-boilerplate",
+  "homepage": "https://github.com/airtogether/airtogether",
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",

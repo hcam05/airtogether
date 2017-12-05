@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './modules';
-import App from './index';
+import App from './app';
 
 const initialState = window.__APP_INITIAL_STATE__;
 const store = createStore(reducers, initialState);

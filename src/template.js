@@ -5,6 +5,7 @@ export default ({ body, title, initialState }) => {
       <head>
         <script>window.__APP_INITIAL_STATE__ = ${initialState}</script>
         <title>${title}</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">        
         <link rel="stylesheet" href="/assets/index.css" />
       </head>
       

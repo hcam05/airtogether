@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import reducers from './app/modules';
 import { enableMobile } from './app/modules/device';
 
-import App from './app';
+import App from './app/app';
 import template from './template';
 
 const server = express();

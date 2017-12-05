@@ -9,7 +9,7 @@ var productionPluginDefine = isProduction ? [
 var clientLoaders = isProduction ? productionPluginDefine.concat([
   new webpack.optimize.DedupePlugin(),
   new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }, sourceMap: false })
+  // new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }, sourceMap: false })
 ]) : [];
 
 var commonLoaders = [
@@ -66,10 +66,6 @@ module.exports = [
           test: /\.js$/,
           exclude: /node_modules/,
           loader: 'babel'
-        },
-        {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
         }
       ]
     },

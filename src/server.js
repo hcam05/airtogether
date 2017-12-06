@@ -12,20 +12,28 @@ import template from './template';
 //import database configuration
 import db from './db/dbConfig';
 //import database controllers
-// import {addUser} from './controllers/event-controllers';
+import userController from './controllers/userController';
+
+import bodyParser from 'body-parser';
 
 //database connection
-db.connect()
-  .then(obj => {
-    console.log('connected to db')
-    // db.query('SELECT * FROM "Users"')
-    // .then((resp) => console.log(resp))
-    // db.query('SELECT * FROM "Services"')
-    // .then((resp) => console.log(resp))
-  })
-  .catch(error => console.log('error connecting'));
+// db.connect()
+//   .then(obj => {
+//     console.log('connected to db')
+//     db.query('SELECT * FROM "Users"')
+//     .then((resp) => console.log(resp))
+//     // db.query('SELECT * FROM "Services"')
+//     // .then((resp) => console.log(resp))
+//   })
+//   .catch(error => console.log('error connecting'));
 
 const server = express();
+
+/**
+ * Middleware for bodyParser
+ */
+server.use(bodyParser.urlencoded({ extended : true}));
+server.use(bodyParser.json());
 
 server.use('/assets', express.static('assets'));
 
@@ -51,10 +59,11 @@ server.get('/', (req, res) => {
 //server routes
 
 //Create New Routes
-server.post('/createuser', (req, res) => {
-  console.log('hello create user')
-  res.send('hello add user');
-})
+server.post('/createuser', userController.addUser);
+
+//Query Users
+server.get('/createuser', userController.getAllUsers);
+
 //Join a Group
 server.post('/joingroup', (req, res) => {
   console.log('hello join group')
